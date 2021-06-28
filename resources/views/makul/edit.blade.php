@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Input Data Mahasiswa</div>
+                <div class="card-header">Edit Data Mata Kuliah</div>
 
                 <div class="card-body">
                 <form action="{{ route('updt.makul',$makul->id) }}" method="post" class="form-item">
