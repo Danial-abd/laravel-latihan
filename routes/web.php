@@ -34,4 +34,4 @@ Route::get('makul-tbh','MakulController@tambah')->name('tbh.makul');
 Route::post('makul-save','MakulController@store')->name('save.makul');
 Route::get('makul-edit/{id}','MakulController@edit')->name('edit.makul');
 Route::post('makul-updt/{id}','MakulController@update')->name('updt.makul');
-Route::get('dlt-mhs/{id}','MakulController@delete')->name('dlt.makul');
+Route::get('dlt-makul/{id}','MakulController@delete')->name('dlt.makul');
