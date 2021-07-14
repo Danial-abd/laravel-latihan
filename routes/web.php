@@ -35,3 +35,11 @@ Route::post('makul-save','MakulController@store')->name('save.makul');
 Route::get('makul-edit/{id}','MakulController@edit')->name('edit.makul');
 Route::post('makul-updt/{id}','MakulController@update')->name('updt.makul');
 Route::get('dlt-makul/{id}','MakulController@delete')->name('dlt.makul');
+
+//Nilai
+Route::get('nilai', 'NilaiController@index')->name('nilai');
+Route::get('nilai-tbh','NilaiController@tambah')->name('tbh.nilai');
+Route::post('nilai-save','NilaiController@store')->name('save.nilai');
+Route::get('nilai-edit/{id}','NilaiController@edit')->name('edit.nilai');
+Route::post('nilai-updt/{id}','NilaiController@update')->name('updt.nilai');
+Route::get('dlt-nilai/{id}','NilaiController@delete')->name('dlt.nilai');

@@ -5,18 +5,20 @@ namespace App\Http\Controllers;
 use App\Mahasiswa;
 use Illuminate\Http\Request;
 Use Alert;
+use App\User;
 
 class MahasiswaController extends Controller
 {
     public function index()
     {
-        $mahasiswa = Mahasiswa::all();
+        $mahasiswa = Mahasiswa::with(['user'])->get();
         return view('mahasiswa.index', compact('mahasiswa'));
     }
 
     public function tambah()
     {
-        return view('mahasiswa.tambah');
+        $user = User::all();
+        return view('mahasiswa.tambah', compact('user'));
     }
 
     public function store(Request $request)
@@ -31,9 +33,10 @@ class MahasiswaController extends Controller
     {
        //dd($id); *cek data id
        
+       $user = User::all();
        $mahasiswa = Mahasiswa::find($id);
        //dd($mahasiswa);          //cek data dari database
-       return view('mahasiswa.edit', compact('mahasiswa'));
+       return view('mahasiswa.edit', compact('mahasiswa','user'));
        
     }
 

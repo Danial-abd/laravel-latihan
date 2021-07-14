@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Input Data Mahasiswa</div>
 
@@ -11,12 +11,17 @@
                 <form action="{{ route('simpan.mahasiswa') }}" method="post" class="form-item">
                 @csrf 
                     <div class="form-group">
-                        <label for="npm">NPM</label>
-                        <input type="text" name="npm" class="form-control" placeholder="Masukkan NPM">
+                        <label for="">Nama Mahasiswa</label>
+                        <select name="user_id" id="user_id" class="form-control">
+                            <option value="" disabled selected>--Pilih Nama Mahasiswa--</option>
+                            @foreach($user as $u)
+                                <option value="{{$u->id}}">{{$u->name}}</option>    
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="nama_mahasiswa">Nama Mahasiswa</label>
-                        <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Masukkan Nama Mahasiswa">
+                        <label for="">NPM</label>
+                        <input type="number" name="npm" class="form-control" placeholder="Masukkan Nama Mahasiswa">
                     </div>
                     <div class="form-group">
                         <label for="tempat_lahir">Tempat Lahir</label>
@@ -29,6 +34,7 @@
                     <div class="form-group">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
                         <select name="jenis_kelamin" class="form-control">
+                            <option value="" disabled selected>--Pilih Jenis Kelamin--</option>
                             <option value="L">Laki-laki</option>
                             <option value="P">Perempuan</option>
                         </select>
@@ -39,7 +45,7 @@
                     </div>
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
-                        <input type="text" name="alamat" class="form-control" placeholder="Masukkan Alamat">
+                        <textarea name="alamat" id="alamat" class="form-control" cols="2" rows="3" placeholder="Masukkan Alamat" style="resize : none"></textarea>
                     </div>
 
                     <div class="form-group">
