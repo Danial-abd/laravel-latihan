@@ -30,7 +30,7 @@
                                     <td>{{$no++}}</td>
                                     <td>{{$mhs->npm}}</td>
                                     <td>{{$mhs->user->name}}</td>
-                                    <td>{{$mhs->tempat_lahir.','.$mhs->tgl_lahir}}</td>
+                                    <td>{{$mhs->tempat_lahir.', '.$mhs->tgl_lahir}}</td>
                                     <td>{{$mhs->jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan'}}</td>
                                     <td>{{$mhs->telepon}}</td>
                                     <td>{{$mhs->alamat}}</td>

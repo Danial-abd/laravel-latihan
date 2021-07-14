@@ -38,7 +38,7 @@
                         <div class="form-row float-right">
                             <div class="col">
                                 <button type="submit" class="btn btn-sm btn-success" name="simpan">Simpan</button>
-                                <a href="#" class="btn btn-sm btn-light ">Batal</a>
+                                <a href="{{route('nilai')}}" class="btn btn-sm btn-light ">Batal</a>
                             </div>
                         </div>
                     </div>
