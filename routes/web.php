@@ -43,3 +43,11 @@ Route::post('nilai-save','NilaiController@store')->name('save.nilai');
 Route::get('nilai-edit/{id}','NilaiController@edit')->name('edit.nilai');
 Route::post('nilai-updt/{id}','NilaiController@update')->name('updt.nilai');
 Route::get('dlt-nilai/{id}','NilaiController@delete')->name('dlt.nilai');
+
+//user
+Route::get('user', 'UsersController@index')->name('user');
+Route::get('user-tbh','UsersController@tambah')->name('tbh.user');
+Route::post('user-save','UsersController@store')->name('save.user');
+Route::get('user-edit/{id}','UsersController@edit')->name('edit.user');
+Route::post('user-updt/{id}','UsersController@update')->name('updt.user');
+Route::get('user-dlt/{id}','UsersController@delete')->name('dlt.user');

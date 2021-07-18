@@ -43,6 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('nilai')}}">Data Nilai</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('user')}}">Data User</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
