@@ -23,7 +23,7 @@
                             </div>
                             <div class="col">
                                 <label for="nama_mahasiswa">NPM</label>
-                                <input type="number" name="nama_mahasiswa" class="form-control" maxlength="8" placeholder="Masukkan Nama Mahasiswa" value="{{ is_null ($mahasiswa) ? '' : $mahasiswa->npm }}">
+                                <input type="number" name="npm" class="form-control" maxlength="8" placeholder="Masukkan Nama Mahasiswa" value="{{ is_null ($mahasiswa) ? '' : $mahasiswa->npm }}">
                             </div>
                             <div class="col">
                                     <label for="tempat_lahir">Tempat Lahir</label>
